@@ -5,7 +5,8 @@
 function hello() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-
+  var p = document.getElementById("output1");
+  p.innerHTML="Hello, AP Computer Science Principles!";
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
@@ -17,12 +18,15 @@ function hello() {
 
 function helloAgain() {
 
+
   //////////// DO NOT MODIFY      Use the @name variable to store
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
 
   // WRITE YOUR EXERCISE 2 CODE HERE
-
+  name = prompt("What is your name?");
+  var p = document.getElementById("output2");
+  p.innerHTML="Hello, " + name + "!";
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
@@ -42,7 +46,8 @@ function celsius() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-
+  var p = document.getElementById("output3");
+  p.innerHTML=cels+" degrees Celsius equals "+(cels*1.8+32).toFixed(2)+" degrees Fahrenheit.";
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -62,7 +67,8 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-
+  var p = document.getElementById("output4");
+  p.innerHTML=fahr+" degrees Fahrenheit equals "+((fahr-32)*5/9).toFixed(2)+" degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
@@ -86,7 +92,10 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-
+  var p = document.getElementById("output5");
+  p.innerHTML+="Feet: " + (inches/12).toFixed(2);
+  p.innerHTML+=document.createElement("br/");
+  p.innerHTML+="Inches: "+ inches;
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
