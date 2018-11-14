@@ -5,7 +5,7 @@
 function hello() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-  var p = document.getElementById("output1");
+  let p = document.getElementById("output1");
   p.innerHTML="Hello, AP Computer Science Principles!";
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
@@ -19,13 +19,13 @@ function hello() {
 function helloAgain() {
 
 
-  //////////// DO NOT MODIFY      Use the @name variable to store
+  //////////// DO NOT MODIFY      Use the @name letiable to store
   let name; // DO NOT MODIFY      the value that the user enters
   //////////// DO NOT MODIFY      in response to your prompt.
 
   // WRITE YOUR EXERCISE 2 CODE HERE
   name = prompt("What is your name?");
-  var p = document.getElementById("output2");
+  let p = document.getElementById("output2");
   p.innerHTML="Hello, " + name + "!";
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
@@ -46,7 +46,7 @@ function celsius() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-  var p = document.getElementById("output3");
+  let p = document.getElementById("output3");
   p.innerHTML=cels+" degrees Celsius equals "+(cels*1.8+32).toFixed(2)+" degrees Fahrenheit.";
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
@@ -67,7 +67,7 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-  var p = document.getElementById("output4");
+  let p = document.getElementById("output4");
   p.innerHTML=fahr+" degrees Fahrenheit equals "+((fahr-32)*5/9).toFixed(2)+" degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
@@ -92,10 +92,11 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-  var p = document.getElementById("output5");
-  p.innerHTML+="Feet: " + (inches/12).toFixed(2);
-  p.innerHTML+=document.createElement("br/");
-  p.innerHTML+="Inches: "+ inches;
+  let p = document.getElementById("output5");
+  p.innerHTML="Miles: "+Math.floor(inches/63360);
+  p.innerHTML+="<br/>" + "Yards: "+ Math.floor((inches%63360)/36);
+  p.innerHTML+="<br/>" + "Feet: " + Math.floor((inches%36)/12);
+  p.innerHTML+="<br/>" + "Inches: " + inches%12;
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -119,7 +120,10 @@ function centimeters() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
-
+  let p = document.getElementById("output6");
+  p.innerHTML="Kilometers: "+Math.floor(centimeters/100000);
+  p.innerHTML+="<br/>" + "Meters: "+ Math.floor((centimeters%100000)/100);
+  p.innerHTML+="<br/>" + "Centimeters: " + centimeters%100;
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
@@ -143,7 +147,12 @@ function fluidOunces() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 7 CODE HERE
-
+  let p = document.getElementById("output7");
+  p.innerHTML="Gallons: "+ Math.floor(fluidOunces/128);
+  p.innerHTML+="<br/>" + "Quarts: "+ Math.floor((fluidOunces%128)/32);
+  p.innerHTML+="<br/>" + "Pints: " + Math.floor((fluidOunces%32)/16);
+  p.innerHTML+="<br/>" + "Cups: " + Math.floor((fluidOunces%16)/8);
+  p.innerHTML+="<br/>" + "Fluid Ounces: " + fluidOunces%8;
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
