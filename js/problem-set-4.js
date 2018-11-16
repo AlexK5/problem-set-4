@@ -238,7 +238,11 @@ function change() {
   total+=Math.floor(amount%0.25)/0.1);
   total+=Math.floor((amount%0.1/0.05);
   total+=amount%0.05
-  p.innerHTML=total+" coins"
+  if(total==1){
+  p.innerHTML=total+" coin."
+  }else{
+  p.innerHTML=total+" coins."
+  }
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
