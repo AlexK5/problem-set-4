@@ -176,7 +176,10 @@ function ounces() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 8 CODE HERE
-
+  let p = document.getElementById("output8");
+  p.innerHTML="Tons: "+ Math.floor(ounces/32000);
+  p.innerHTML+="<br/>" + "Pounds: "+ Math.floor((ounces%32000)/16);
+  p.innerHTML+="<br/>" + "Ounces: " + ounces%16;  
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -200,7 +203,12 @@ function money() {
   /////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 9 CODE HERE
-
+  let p = document.getElementById("output9");
+  p.innerHTML="Dollars: "+ Math.floor(pennies/100);
+  p.innerHTML+="<br/>" + "Quarters: "+ Math.floor((pennies%100)/25);
+  p.innerHTML+="<br/>" + "Dimes: " + Math.floor((pennies%25)/2);
+  p.innerHTML+="<br/>" + "Nickels: " + Math.floor((pennies%10)/5);
+  p.innerHTML+="<br/>" + "Pennies: " + pennies%8;
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
   ///////////////////////// DO NOT MODIFY
@@ -224,7 +232,13 @@ function change() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 10 CODE HERE
-
+  let p = document.getElementById("output10");
+  let total=Math.floor(amount/100);
+  total+=Math.floor((amount%100)/25);
+  total+=Math.floor(amount%25)/2);
+  total+=Math.floor((amount%10)/5);
+  total+=amount%8;
+  p.innerHTML=total+" coins"
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
