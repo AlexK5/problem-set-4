@@ -208,7 +208,7 @@ function money() {
   p.innerHTML+="<br/>" + "Quarters: "+ Math.floor((pennies%100)/25);
   p.innerHTML+="<br/>" + "Dimes: " + Math.floor((pennies%25)/10);
   p.innerHTML+="<br/>" + "Nickels: " + Math.floor((pennies%10)/5);
-  p.innerHTML+="<br/>" + "Pennies: " + pennies%8;
+  p.innerHTML+="<br/>" + "Pennies: " + pennies%5;
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
   ///////////////////////// DO NOT MODIFY
@@ -233,11 +233,11 @@ function change() {
 
   // WRITE YOUR EXERCISE 10 CODE HERE
   let p = document.getElementById("output10");
-  let total=Math.floor(amount/100);
-  total+=Math.floor((amount%100)/25);
-  total+=Math.floor(amount%25)/10);
-  total+=Math.floor((amount%10)/5);
-  total+=amount%8;
+  let total=Math.floor(amount/1);
+  total+=Math.floor((amount%1)/0.25);
+  total+=Math.floor(amount%0.25)/0.1);
+  total+=Math.floor((amount%0.1/0.05);
+  total+=amount%0.05
   p.innerHTML=total+" coins"
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
