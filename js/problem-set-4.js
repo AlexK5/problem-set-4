@@ -179,7 +179,7 @@ function ounces() {
   let p = document.getElementById("output8");
   p.innerHTML="Tons: "+ Math.floor(ounces/32000);
   p.innerHTML+="<br/>" + "Pounds: "+ Math.floor((ounces%32000)/16);
-  p.innerHTML+="<br/>" + "Ounces: " + ounces%16;  
+  p.innerHTML+="<br/>" + "Ounces: " + ounces%16;
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -205,10 +205,14 @@ function money() {
   // WRITE YOUR EXERCISE 9 CODE HERE
   let p = document.getElementById("output9");
   p.innerHTML="Dollars: "+ Math.floor(pennies/100);
-  p.innerHTML+="<br/>" + "Quarters: "+ Math.floor((pennies%100)/25);
-  p.innerHTML+="<br/>" + "Dimes: " + Math.floor((pennies%25)/10);
-  p.innerHTML+="<br/>" + "Nickels: " + Math.floor((pennies%10)/5);
-  p.innerHTML+="<br/>" + "Pennies: " + pennies%5;
+  pennies%=100
+  p.innerHTML+="<br/>" + "Quarters: "+ Math.floor(pennies/25);
+  pennies%=25
+  p.innerHTML+="<br/>" + "Dimes: " + Math.floor(pennies/10);
+  pennies%=10
+  p.innerHTML+="<br/>" + "Nickels: " + Math.floor(pennies/5);
+  pennies%=5
+  p.innerHTML+="<br/>" + "Pennies: " + pennies;
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
   ///////////////////////// DO NOT MODIFY
@@ -234,10 +238,14 @@ function change() {
   // WRITE YOUR EXERCISE 10 CODE HERE
   let p = document.getElementById("output10");
   let total=0;
-  total+=Math.floor((amount%1)/0.25);
-  total+=Math.floor((amount%0.25)/0.1);
-  total+=Math.floor((amount%0.1)/0.05);
-  total+=amount%0.05;
+  total+=Math.floor(amount/0.25);
+  amount%=0.25
+  total+=Math.floor(amount/0.1);
+  amount%=0.1
+  total+=Math.floor(amount/0.05);
+  amount%=0.05
+  total+=amount/0.01;
+  total=Math.floor(total+0.5)
   if(total==1){
   p.innerHTML=total+" coin."
   }else{
