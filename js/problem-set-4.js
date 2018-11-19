@@ -233,11 +233,11 @@ function change() {
 
   // WRITE YOUR EXERCISE 10 CODE HERE
   let p = document.getElementById("output10");
-  let total=Math.floor(amount/1);
+  let total=0;
   total+=Math.floor((amount%1)/0.25);
-  total+=Math.floor(amount%0.25)/0.1);
+  total+=Math.floor((amount%0.25)/0.1);
   total+=Math.floor((amount%0.1)/0.05);
-  total+=amount%0.05
+  total+=amount%0.05;
   if(total==1){
   p.innerHTML=total+" coin."
   }else{
